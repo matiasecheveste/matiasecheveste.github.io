@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto EducaDonar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Página de carga -->
+    <div id="loading-screen">
+        <img src="icon.png" alt="Logo">
+        <div class="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- Contenido principal (se carga después) -->
+    <div id="main-content" style="display: none;">
+        <div class="container">
+            <div class="form-container" id="registro-form">
+                <div class="logo">
+                    <img src="icon.png" alt="Logo">
+                </div>
+                <h2>Registro</h2>
+                <input type="email" id="registro-email" placeholder="Correo Electrónico">
+                <input type="password" id="registro-password" placeholder="Contraseña">
+                <button class="btn-register" onclick="registrarUsuario()">Registrarse</button>
+                <p>¿Ya tienes una cuenta? <a href="#" onclick="mostrarInicioSesion()">Inicia Sesión</a></p>
+            </div>
+            <div class="form-container" id="inicio-sesion-form" style="display: none;">
+                <div class="logo">
+                    <img src="icon.png" alt="Logo">
+                </div>
+                <h2>Iniciar Sesión</h2>
+                <input type="email" id="inicio-sesion-email" placeholder="Correo Electrónico">
+                <input type="password" id="inicio-sesion-password" placeholder="Contraseña">
+                <button class="btn-login" onclick="iniciarSesion()">Iniciar Sesión</button>
+                <p>¿Aún no tienes una cuenta? <a href="#" onclick="mostrarRegistro()">Regístrate</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js"></script>
+
+    <!-- Tus scripts personalizados aquí 
+    <script src="firebase-config.js"></script>
+    <script src="auth.js"></script>
+    <script src="pagina-principal.js"></script>-->
+
+    <script>
+        // Simula la carga del contenido principal después de un retraso (puedes eliminar esto en tu implementación real)
+        setTimeout(function() {
+            document.getElementById('loading-screen').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+        }, 0); // Simula una carga de 3 segundos
+    </script>
+</body>
+</html>

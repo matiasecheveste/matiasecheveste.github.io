@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Proyecto EducaDonar</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="icon.png" alt="Logo">
+            <h1>Proyecto EducaDonar</h1>
+        </div>
+        <div class="options">
+            <button id="crearDonacionBtn">Crear Donación</button>
+            <button id="cerrarSesionBtn">Cerrar Sesión</button>
+        </div>
+    </div>    
+
+    <div class="container">
+        <div id="causas-donacion-panel" class="panel">
+            <h2>Publicar Meta de Donación</h2>
+            <form id="meta-form">
+                <input type="text" id="nombre-causa" placeholder="Nombre de la Causa" required>
+                <textarea id="detalles-causa" placeholder="Detalles de la Causa" required></textarea>
+                <input type="number" id="cantidad-objetivo" placeholder="Cantidad Objetivo" required>
+                <label for="imagen-portada">Imagen de Portada para la Causa</label>
+                <input type="file" id="imagen-portada" accept="image/*" required>
+                <button type="submit">Publicar</button>
+                <button type="button" id="btnCancelar">Cancelar</button>
+            </form>
+        </div>
+    </div>    
+
+    <div class="container">
+        <div id="causas-donacion-container" class="panel">
+            
+        </div>
+    </div>
+
+    <script src="firebase-config.js"></script>
+    <script src="auth.js"></script>
+    <script src="pagina-principal.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js"></script>
+</body>
+</html>

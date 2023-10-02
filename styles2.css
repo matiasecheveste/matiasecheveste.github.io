@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex; /* Para colocar el logo y el texto en línea */
+    align-items: center; /* Para centrar verticalmente */
+}
+
+.logo img {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px; /* Tamaño del texto */
+}
+
+.options button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.panel {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#causas-donacion-container {
+    margin-top: 20px;
+}
+
+#causas-donacion-container .causa-donacion {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+#causas-donacion-container h3 {
+    margin: 0;
+}
+
+.panel {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+}
+
+.panel h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.panel form {
+    display: flex;
+    flex-direction: column;
+}
+
+.panel input[type="text"],
+.panel textarea,
+.panel input[type="number"],
+.panel input[type="file"],
+.panel button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.panel button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.panel button#btnCancelar {
+    background-color: #ccc;
+}
+
+/* Estilos para el formulario en línea en dispositivos pequeños */
+@media (max-width: 768px) {
+    .panel form {
+        flex-direction: column;
+    }
+
+    .panel input[type="text"],
+    .panel textarea,
+    .panel input[type="number"],
+    .panel input[type="file"] {
+        width: 100%;
+    }
+}
+
+/* Estilos para la lista de causas de donación */
+.causa-donacion {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.causa-donacion h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.causa-donacion p {
+    margin: 5px 0;
+    color: #777;
+}
+
+/* Estilos adicionales para la lista, como espaciado y márgenes */
+#causas-donacion-container {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
